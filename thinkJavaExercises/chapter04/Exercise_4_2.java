@@ -1,5 +1,5 @@
 /*
- * Think Java - Exercise 4.2
+ * Think Java v.6 - Exercise 4.2
  *
  * The point of this exercise is to make sure you understand how to write and
  * invoke methods that take parameters.

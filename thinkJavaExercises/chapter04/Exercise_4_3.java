@@ -1,5 +1,5 @@
 /*
- * Think Java - Exercise_4_3
+ * Think Java v.6 - Exercise_4_3
  *
  * The purpose of this exercise is to take code from a previous exercise and
  * encapsulate it in a method that takes parameters. You should start with a
