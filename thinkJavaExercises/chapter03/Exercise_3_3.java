@@ -1,5 +1,5 @@
 /*
- * Exercise 3.3 - Think Java
+ * Exercise 3.3 v.6 - Think Java
  *
  * Write a program that converts a total number of seconds to hours, minutes,
  * and seconds. It should (1) prompt the user for input, (2) read an integer

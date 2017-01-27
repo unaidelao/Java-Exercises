@@ -1,2 +1,4 @@
 # Java-Exercises
-Various Java Exercises from Think Java v.6 and others
+In this repo you'll find:
+* Solved exercises from Think Java v.6 manual
+* Other Java programs as examples
