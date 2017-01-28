@@ -1,4 +1,4 @@
-/*
+/**
  * Programa que calcula un factorial de un número, usando un bucle for.
  * Por ejemplo, 5! = 5 * 4 * 3 * 2 * 1.
  */
@@ -11,8 +11,8 @@ public class Factorial {
 
     /*
      * A continuación, se utiliza Long como tipo de dato porque los factoriales
-     * son números muy grandes. Aún así el tipo Long se quedaría corto muy rápido,
-     * debiendo utilizar, por ejemplo, la clase BigInteger de la API.
+     * son números muy grandes. Aún así el tipo Long se quedaría corto muy
+     * rápido, debiendo utilizar, por ejemplo, la clase BigInteger de la API.
      */
     Long resultado = 1L;
 
