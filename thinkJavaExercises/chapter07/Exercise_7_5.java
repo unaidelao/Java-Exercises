@@ -1,5 +1,5 @@
 /**
- * Think Java v.6 - Exercise 6.6
+ * Think Java v.6 - Exercise 7.5
  *
  * One way to calculate e^x is to use the infinite series expansion
  *     e^x = 1 + x + x^2/2! + x^3/3! + x^4/4! + ...
