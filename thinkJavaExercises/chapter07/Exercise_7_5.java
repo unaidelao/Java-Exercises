@@ -36,6 +36,7 @@
  * 6. Add a loop in main that checks myexp with the values -0.1, -1.0, -10.0,
  *    and -100.0.  Comment on the accuracy.
  *
+ * @author Unai de la O
  */
 public class Exercise_7_5 {
 
