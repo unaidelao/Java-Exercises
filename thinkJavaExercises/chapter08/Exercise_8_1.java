@@ -34,12 +34,6 @@ public class Exercise_8_1 {
     return a;
   }
 
-  /*
-  public static int[] histogram(int[] a, ) {
-
-  }
-  */
-
   public static void main(String[] args) {
     Random random = new Random();
     double a[] = new double[30];
