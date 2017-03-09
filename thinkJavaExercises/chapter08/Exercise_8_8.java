@@ -17,6 +17,12 @@
  * two pieces, find the maximum in each of the pieces, and then find the
  * maximum of the maxima.
  *
+ * (2) Methods like maxInRange can be awkward to use. To find the largest
+ * element in an array, we have to provide the range for the entire array.
+ *         double max = maxInRange(a, 0, a.length - 1);
+ * Write a method called max that takes an array and uses maxInRange to find
+ * and return the largest element.
+ *
  * @author Unai de la O
  */
 import java.util.Arrays;
@@ -41,6 +47,10 @@ public class Exercise_8_8 {
     }
   }
 
+  public static int max(int[] array) {
+    return maxInRange(array, 0, array.length - 1);
+  }
+
   public static void main(String[] args) {
 
     // Testing the code...
@@ -49,6 +59,11 @@ public class Exercise_8_8 {
     System.out.println(Arrays.toString(array));
     System.out.println();
 
-    System.out.println(maxInRange(array, 1, 4));
+    System.out.print("First part of the exercise: ");
+    System.out.println(maxInRange(array, 4, 6));
+    System.out.println();
+
+    System.out.print("Second part of the exercise: ");
+    System.out.println(max(array));
   }
 }
