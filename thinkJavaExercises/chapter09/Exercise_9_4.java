@@ -76,16 +76,38 @@ public class Exercise_9_4 {
   }
 
   // printBackward method
-  // much more ease way of doing it
+  // much more ease way of doing it as a recursive method
   public static void printBackward(String s) {
+    // base case
     if (length(s) > 1) {
       printBackward(rest(s));
     }
     System.out.println(first(s));
   }
 
-  // reverseString method (STILL TO DO...)
-  // isPalindrome method (STILL TO DO...)
+  // reverseString method
+  public static String reverseString(String s) {
+    // base case
+    if (length(s) == 1){
+      return s;
+    }
+    else {
+      String reverse = reverseString(rest(s) + first(s));
+      return reverse;
+    }
+  }
+  // isPalindrome method
+  public static boolean isPalindrome(String s) {
+    if (s.length() <= 1) {
+      return true;
+    }
+    if (first (s) != s.charAt(s.length() - 1)) {
+      return false;
+    }
+    else {
+      return isPalindrome(middle(s));
+    }
+  }
 
   // main
   public static void main(String[] args) {
@@ -102,5 +124,8 @@ public class Exercise_9_4 {
     printString(text);
     System.out.printf("\nTesting printBackward method:\n\n");
     printBackward(text);
+    System.out.printf("\nTesting isPalindrome method:\n\n");
+    String text2 = "Ale ela";
+    System.out.println(isPalindrome(text2));
   }
 }
