@@ -1,0 +1,1 @@
+Ejercicios resueltos del libro "Programación en Java 2" de la serie Schaum.
