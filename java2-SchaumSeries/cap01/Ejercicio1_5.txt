@@ -1,0 +1,32 @@
+/*
+ * Programación en Java 2, Serie Schaum
+ *
+ * Ejercicio 1.5
+ *
+ * Dados los siguientes identificadores que se van a utilizar en un programa
+ * escrito en Java, diga cuáles de ellos son correctos y cuáles no.
+ */
+
+ a) descarta2
+ Correcto
+
+ b) cuántosQuerrás
+ Correcto
+
+ c) Carr3Mesas
+ Correcto
+
+ d) çaVaBienAvec$$
+ Correcto
+
+ e) Êgresa
+ Correcto
+
+ f) österreich
+ Correcto
+
+ g) Nosÿevan
+ Correcto
+
+ h) EsäCîìÄÉôöòûùÿÖÜ
+ Correcto. No obstante, el identificador debería ser claro y entendible.
