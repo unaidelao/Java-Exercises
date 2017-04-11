@@ -1,0 +1,50 @@
+/*
+ * Programación en Java 2, Serie Schaum
+ *
+ * Ejercicio 1.4
+ *
+ * Dados los siguientes identificadores que se van a utilizar en un programa
+ * escrito en Java, diga cuáles de ellos son correctos y cuáles no.
+ */
+
+ a) mi carta
+ Incorrecto. Hay un espacio en medio.
+
+ b) unacarta
+ Correcto.
+
+ c) mis2escritos
+ Correcto
+
+ d) 4cientos
+ Incorrecto. No puede empezar con un dígito.
+
+ e) es_un_mensaje
+ Correcto
+
+ f) no_vale nada
+ Incorrecto. Hay un espacio en medio.
+
+ g) ___ejemplo___
+ Correcto
+
+ h) mi-programa
+ Incorrecto. No se puede usar el guión.
+
+ i) ¿cuantos?
+ Incorrecto. No se pueden usar signos de interrogación.
+
+ j) el%Descontado
+ Incorrecto. No se puede usar el tanto por ciento.
+
+ k) al50PORHORA
+ Correcto
+
+ l) TengoMUCHOS$$$
+ Correcto. Aunque empezar con letra mayúscula debería reservarse a clases
+
+ m) LOS400GOLPES
+ Correcto. Aunque todo en mayúsculas debe reservarse a constantes
+
+ n) quieroUNAsolución
+ Correcto
