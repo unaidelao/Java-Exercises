@@ -41,8 +41,24 @@
      return temp;
    }
 
+   // Método recursivo.
+   public static int fibRecur(int n) {
+     if (n < 0) {
+       return -1;
+     }
+
+     if (n == 1 || n == 2) {
+       return 1;
+     }
+     else {
+       return fibRecur(n - 1) + fibRecur(n - 2);
+     }
+   }
+
    // MAIN y prueba del programa
    public static void main(String[] args) {
+     System.out.println("FUNCION ITERATIVA");
+     System.out.println("-----------------");
      System.out.println("Primer digito de la serie Fibonacci: " + fibIter(1));
      System.out.println("Segundo digito de la serie Fibonacci: " + fibIter(2));
      System.out.println("Tercer digito de la serie Fibonacci: " + fibIter(3));
@@ -51,5 +67,16 @@
      System.out.println("Sexto digito de la serie Fibonacci: " + fibIter(6));
      System.out.println("Septimo digito de la serie Fibonacci: " + fibIter(7));
      System.out.println("Octavo digito de la serie Fibonacci: " + fibIter(8));
+     System.out.println();
+     System.out.println("FUNCION RECURSIVA");
+     System.out.println("-----------------");
+     System.out.println("Primer digito de la serie Fibonacci: " + fibRecur(1));
+     System.out.println("Segundo digito de la serie Fibonacci: " + fibRecur(2));
+     System.out.println("Tercer digito de la serie Fibonacci: " + fibRecur(3));
+     System.out.println("Cuarto digito de la serie Fibonacci: " + fibRecur(4));
+     System.out.println("Quinto digito de la serie Fibonacci: " + fibRecur(5));
+     System.out.println("Sexto digito de la serie Fibonacci: " + fibRecur(6));
+     System.out.println("Septimo digito de la serie Fibonacci: " + fibRecur(7));
+     System.out.println("Octavo digito de la serie Fibonacci: " + fibRecur(8));
    }
  }
