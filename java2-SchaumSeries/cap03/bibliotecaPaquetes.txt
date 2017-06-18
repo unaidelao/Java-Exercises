@@ -1,0 +1,41 @@
+/**
+ * Programación en Java 2 - Serie Schaum
+ *
+ * Ejercicio 3.9
+ *
+ * Se desea realizar una biblioteca de clases para el tratamiento de imágenes
+ * vídeo y audio para la realización de aplicaciones multimedia. Como existirán
+ * multitud de formatos de imágenes, vídeo y sonido, se estructuran las
+ * distintas clases en un paquete, llamado mediaBib. Se agruparán los posibles
+ * codificadores y decodificadores en tres subpaquetes:
+ *    - "imagen", con los formatos GIF, TIFF y JPEG.
+ *    - "video", con los formatos H.263, MPEG-1 y MPEG-4.
+ *    - "audio", con los formatos GSM y MP3.
+ *
+ * Y para cada uno de los formatos, se proporcionará una clase que pueda
+ * codificar y decodificar dichos formatos. El nombre de esta clase será
+ * "codecFormato", sustituyendo "Formato" por el tipo tratado, por ejemplo,
+ * codecGIF, codecGSM, etc.
+ *
+ * Se pide diseñar la estructura de directorios necesaria para la biblioteca,
+ * indicando los directorios y ficheros necesarios. Asimismo, para cada fichero
+ * se debe escribir la declaración pertinente respecto de la pertenencia al
+ * paquete. NO SE PIDE que se codifiquen las clases, sólo la información de
+ * estructura.
+ */
+
+La estructura sería la siguiente. Entre corchetes el nombre de las carpetas
+y entre paréntesis, la línea que indica el paquete al que pertenece:
+
+[mediaBib]
+  [audio]
+    - codecGSM.java (package mediaBib.audio;)
+    - codecMP3.java (package mediaBib.audio;)
+  [imagen]
+    - codecGIF.java (package mediaBib.imagen;)
+    - codecJPEG.java (package mediaBib.imagen;)
+    - codecTIFF.java (package mediaBib.imagen;)
+  [video]
+    - codecH263.java (package mediaBib.video;)
+    - codecMPEG1.java (package mediaBib.video;)
+    - codecMPEG4.java (package mediaBib.video;)
