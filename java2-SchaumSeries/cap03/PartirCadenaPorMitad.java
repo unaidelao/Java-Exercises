@@ -1,7 +1,7 @@
 /**
  * Programación en Java 2 - Serie Schaum
  *
- * Ejercicio 3.15
+ * Ejercicio 3.16
  *
  * Escriba un método que, dada una cadena de caracteres, devuelva la mitad
  * inicial de la cadena.
