@@ -6,8 +6,8 @@
  * (1) Escriba un método que, dada una cadena de caracteres, sustituya todas las
  * ocurrencias del texto "es" por "no por".
  *
- * (2) Escriba un segundo método que sustituya todos los grupos de dígitos por un
- * único carácter asterisco.
+ * (2) Escriba un segundo método que sustituya todos los grupos de dígitos por
+ * un único carácter asterisco.
  *
  * Es decir, si la cadena es "esto1234es5678bueno900", el primer método debe
  * devolver "no porto1234no por5678bueno900" y el segundo debe devolver "esto
