@@ -4,7 +4,7 @@
  * Ejercicio 4.5
  *
  * Escriba un método, de nombre escribeOrdenadosDosNumeros, que reciba por
- * parámetro dos números reales y los escriba de menor a mayor.
+ * parámetro dos números enteros y los escriba de menor a mayor.
  *
  * @author Unai de la O
  */
