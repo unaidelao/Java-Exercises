@@ -29,6 +29,8 @@
        return false;
      }
      int divisor = 3;
+
+     // Esta variable en verdad no sé si realmente es necesaria...
      boolean esPrimo = true;
 
      while (divisor * divisor <= n) {
