@@ -45,9 +45,9 @@
      // Método para que el corredor corra
      public void correr() throws AgotadoExcepcion {
        if (energia < 10) {
-         throw new AgotadoExcepcion("Estoy agotado...(energia < 10)");
+         throw new AgotadoExcepcion("Agotado...(energia = " + energia + ")");
        }
-       System.out.println("Estoy corriendo...(gasto 10 de energia)");
+       System.out.println("Corriendo...(energia = " + energia + ")");
        energia -= 10;
      }
    }
