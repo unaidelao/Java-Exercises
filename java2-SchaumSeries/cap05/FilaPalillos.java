@@ -11,8 +11,8 @@
    private int numPalillos;
 
    // constructor
-   public FilaPalillos(int tamaño) {
-     numPalillos = tamaño;
+   public FilaPalillos(int size) {
+     numPalillos = size;
    }
 
    /*
@@ -48,7 +48,7 @@
       * este programa, pero se añade para una posible reutilización para otro
       * juego).
       */
-      public void añadePalillos(int cuantos) {
+      public void addPalillos(int cuantos) {
         numPalillos += cuantos;
       }
 
