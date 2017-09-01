@@ -47,7 +47,7 @@
           System.out.println(juego);
           System.out.println(jugador[turno] + ", elige fila");
           fila = lector.nextInt();
-          System.out.println(jugador[turno] + ", ¿palillos a quitar?");
+          System.out.println(jugador[turno] + ", Palillos a quitar??");
           cuantos = lector.nextInt();
 
           if (juego.quitaPalillos(fila, cuantos)) {
