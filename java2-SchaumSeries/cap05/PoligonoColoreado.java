@@ -40,5 +40,7 @@
     * Sobreescritura del método toString(). Éste método añade la información
     * del color y llama al método toString() de la superclase.
     */
-   return "Poligono con color " + color + "\n" + super.toString();
+   public String toString() {
+     return "Poligono con color " + color + "\n" + super.toString();
+   }
  }
