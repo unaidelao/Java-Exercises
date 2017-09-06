@@ -42,59 +42,59 @@
  public class ListaMultimedia {
    private Multimedia[] lista;
    private int contador;
- }
 
- public ListaMultimedia(int size) {
-   lista = new Multimedia[size];
-   contador = 0;
- }
-
- public int size() {
-   return contador;
- }
-
- private boolean llena() {
-   return contador == lista.length;
- }
-
- public boolean add(Multimedia m) {
-   if (llena()) {
-     return false;
+   public ListaMultimedia(int size) {
+     lista = new Multimedia[size];
+     contador = 0;
    }
-   else {
-     lista[contador] = m;
-     contador++;
-     return true;
-   }
- }
 
- public Multimedia get(int posicion) {
-   if (posicion < 0 || posicion >= contador) {
-     throw new IndexOutOfBoundsException();
+   public int size() {
+     return contador;
    }
-   else {
-     return lista[posicion];
-   }
- }
 
- public int indexOf(Multimedia m) {
-   // solo se recorre hasta la celda que indique contador
-   for (int i = 0; i < contador; i++) {
-     if (m.equals(lista[i])) {
-       return i;
+   private boolean llena() {
+     return contador == lista.length;
+   }
+
+   public boolean add(Multimedia m) {
+     if (llena()) {
+       return false;
+     }
+     else {
+       lista[contador] = m;
+       contador++;
+       return true;
      }
    }
-   // esta sentencia solo se ejecuta si nunca se cumple la condición del if
-   return -1;
- }
 
- public String toString() {
-   String s = "";
-   for (int i = 0; i < contador; i++) {
-     /* si lista[i] referencia a una Pelicula, por ligadora dinámica llamará a
-      *toString() de Pelicula.
-      */
-     s += lista[i].toString() + "\n\n";
+   public Multimedia get(int posicion) {
+     if (posicion < 0 || posicion >= contador) {
+       throw new IndexOutOfBoundsException();
+     }
+     else {
+       return lista[posicion];
+     }
    }
-   return s;
- }
+
+   public int indexOf(Multimedia m) {
+     // solo se recorre hasta la celda que indique contador
+     for (int i = 0; i < contador; i++) {
+       if (m.equals(lista[i])) {
+         return i;
+       }
+     }
+     // esta sentencia solo se ejecuta si nunca se cumple la condición del if
+     return -1;
+   }
+
+   public String toString() {
+     String s = "";
+     for (int i = 0; i < contador; i++) {
+       /* si lista[i] referencia a una Pelicula, por ligadora dinámica llamará a
+        *toString() de Pelicula.
+        */
+       s += lista[i].toString() + "\n\n";
+     }
+     return s;
+   }
+}
