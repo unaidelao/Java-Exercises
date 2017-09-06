@@ -33,6 +33,9 @@
 
      // se crea el objeto con título y autor; resto de argumentos no interesan
      peli = new Pelicula("Regreso al futuro","Robert Zemeckis",null,0,"","");
+     // se añade a la lista
+     lista.add(peli);
+     // se recoge el lugar que ocupa peli en el array
      pos = lista.indexOf(peli);
      // imprime todos los datos de "Regreso al futuro"
      System.out.println("Posicion " + pos + "\n" + lista.get(pos));
