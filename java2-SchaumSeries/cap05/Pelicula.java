@@ -41,7 +41,7 @@
      return actrizPrincipal;
    }
 
-   public toString() {
+   public String toString() {
      String s = "Protagonizado por ";
      if (actrizPrincipal != null) {
        s += actrizPrincipal;
