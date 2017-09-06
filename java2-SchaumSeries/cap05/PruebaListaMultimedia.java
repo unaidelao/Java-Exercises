@@ -25,9 +25,9 @@
       * El método add() recibe objetos de tipo Multimedia. Como Pelicula hereda
       * de Multimedia, son aceptados también.
       */
-     lista.add(new Pelicula("Gattaca","Andrew Niccol",DVD,121,"Ethan Hawke","Uma Thurman"));
-     lista.add(new Pelicula("El Padrino","Coppola",DVD,178,"Marlon Brando","Diane Keaton"));
-     lista.add(new Pelicula("Batman Begins","Chris Nolan",DVD,140,"Chris Bale","Katie Holmes"));
+     lista.add(new Pelicula("Gattaca","Andrew Niccol",Formato.DVD,121,"Ethan Hawke","Uma Thurman"));
+     lista.add(new Pelicula("El Padrino","Coppola",Formato.DVD,178,"Marlon Brando","Diane Keaton"));
+     lista.add(new Pelicula("Batman Begins","Chris Nolan",Formato.DVD,140,"Chris Bale","Katie Holmes"));
 
      System.out.println(lista.toString());
 
