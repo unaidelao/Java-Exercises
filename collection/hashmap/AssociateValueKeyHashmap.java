@@ -19,7 +19,7 @@ import java.util.Map;
         hmap.put(4, "Cow");
         hmap.put(5, "Eagle");
    
-        for (Map<K,V>.Entry element : hmap.entrySet()) {
+        for (Map.Entry element : hmap.entrySet()) {
             System.out.println(element.getKey() + " --> " + element.getValue());
         }
      }
