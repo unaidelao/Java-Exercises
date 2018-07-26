@@ -13,12 +13,13 @@ public class SwingContadorV2 extends JFrame {
    private JTextField texto;
    private JButton botonSumar;
    private JButton botonRestar;
+   private JButton botonLimpiar;
    private int contador = 0;
  
    // Constructor.
    public SwingContadorV2() {
       setLayout(new FlowLayout());
-      setSize(350, 100);
+      setSize(450, 100);
       setTitle("Swing Contador V2");
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  
@@ -47,6 +48,17 @@ public class SwingContadorV2 extends JFrame {
           @Override
           public void actionPerformed(ActionEvent e) {
               --contador;
+              texto.setText(contador + "");
+          }
+      });
+
+      botonLimpiar = new JButton("Limpiar");
+      add(botonLimpiar);
+      botonLimpiar.addActionListener(new ActionListener(){
+      
+          @Override
+          public void actionPerformed(ActionEvent e) {
+              contador = 0;
               texto.setText(contador + "");
           }
       });
