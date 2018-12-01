@@ -15,6 +15,7 @@
      for (int a : array) {
        total += a;
      }
+     return total;
    }
    
    // MAIN y prueba del programa
