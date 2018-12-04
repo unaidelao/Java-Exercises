@@ -17,7 +17,7 @@
  * nota media final del alumno.
  */
 
- public class Alumno {
+ public class Alumno implements Comparable<Alumno> {
    int numeroPersonal;
    String apellido1, apellido2, nombre;
    int numAsignaturas;
@@ -79,4 +79,12 @@
      }
      notaMediaFinal /= numAsignaturas;
    }
+   
+   // Es necesario desarrollar el método compareTo() para implementar la interfaz Comparable<>
+   public int compareTo(Alumno alumno2) {
+     if ((int) (obtenerNotaMediaFinal()*100 - alumno2.obtenerNotaMediaFinal()*100) == 0) {
+       return obtenerNp() - alumno2.obtenerNp();
+     }
+    return (int) (obtenerNotaMediaFinal() - alumno2.obtenerNotaMediaFinal());
+    }
  }
