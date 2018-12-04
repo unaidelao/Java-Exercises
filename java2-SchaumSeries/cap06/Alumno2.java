@@ -33,7 +33,7 @@
      apellido2 = ap2;
      nombre = nom;
      numAsignaturas = numAsig;
-     notasFinales[] = new double[numAsignaturas];
+     notasFinales = new double[numAsignaturas];
    }
 
    public Alumno2(int numPer, String ap1, String ap2, String nom, int numAsig,
@@ -66,10 +66,10 @@
 
    // Método para asignar notas a un objeto Alumno2.
    public void asignarNotas(double[][] notas2Eval) {
-     if (notas2Eval == null) ||
+     if ((notas2Eval == null) ||
          notas2Eval.length != 2 ||
          notas2Eval[0].length != numAsignaturas ||
-         notas2Eval[1].length != numAsignaturas {
+         notas2Eval[1].length != numAsignaturas) {
            throw new IllegalArgumentException("Parametro ingresado no valido");
      }
      // Calcula la nota final de cada asignatura.
