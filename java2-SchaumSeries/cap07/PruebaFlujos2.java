@@ -31,7 +31,10 @@ public class PruebaFlujos2 {
 
         while(iterPuntos.hasNext()) {
             Punto temp = iterPuntos.next();
-            fichero.println();
+            fichero.println(temp.obtenerCoordX());
+            fichero.println(temp.obtenerCoordY());
+            fichero.println(temp.obtenerColor());
         }
+        fichero.close();
     }
 }
