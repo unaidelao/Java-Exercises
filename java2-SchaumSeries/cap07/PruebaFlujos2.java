@@ -1,9 +1,12 @@
 import java.io.BufferedWriter;
+import java.io.EOFException;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -51,6 +54,12 @@ import java.util.Scanner;
  * colección de objetos Punto y el nombre del archivo donde se almacenarán.
  * 
  * El método escribirá directamente cada objeto Punto al archivo.
+ * 
+ * === Ejercicio 7.45 ===
+ * Escriba un método, de nombre obtenerArrayListDeArchivoComoObjeto, que reciba por parámetro el
+ * nombre de un archivo donde se encuentran almacenados varios objetos de la clase Punto.
+ * 
+ * El método leerá los objetos del archivo y los almacenará en un ArrayList que será devuelto.
  */
 public class PruebaFlujos2 {
     // Parte correspondiente al ejercicio 7.43.
@@ -113,6 +122,25 @@ public class PruebaFlujos2 {
         }
         sc.close();
 
+        return alPuntos;
+    }
+
+    // Parte correspondiente al ejercicio 7.45.
+    public static ArrayList<Punto> obtenerArrayListDeArchivoComoObjeto(String ruta) throws ClassNotFoundException, IOException {
+        FileInputStream fis = new FileInputStream(ruta);
+        ObjectInputStream ois = new ObjectInputStream(fis);
+
+        ArrayList<Punto> alPuntos = new ArrayList<Punto>();
+
+        try {
+            do {
+                Punto temp = (Punto) ois.readObject();
+                alPuntos.add(temp);
+            } while (true);
+        } catch (EOFException e) {
+            System.out.println("Fin de archivo alcanzado.");
+        }
+        
         return alPuntos;
     }
 }
