@@ -60,6 +60,14 @@ import java.util.Scanner;
  * nombre de un archivo donde se encuentran almacenados varios objetos de la clase Punto.
  * 
  * El método leerá los objetos del archivo y los almacenará en un ArrayList que será devuelto.
+ * 
+ * === Ejercicio 7.46 ===
+ * Escriba un método, de nombre escribirArrayListEnArchivo, que reciba por parámetro un objeto
+ * ArrayList de objetos Punto, así como el nombre del archivo donde se almacenará.
+ * 
+ * El método almacenará directamente el objeto ArrayList sobre el archivo recibido.
+ * 
+ * No se capturará ninguna excepción que pueda producirse.
  */
 public class PruebaFlujos2 {
     // Parte correspondiente al ejercicio 7.43.
@@ -142,5 +150,16 @@ public class PruebaFlujos2 {
         }
         
         return alPuntos;
+    }
+
+    // Parte correspondiente al ejercicio 7.46.
+    public static void escribirArrayListEnArchivo(ArrayList<Punto> alPuntos, String ruta) throws IOException {
+        FileOutputStream fos = new FileOutputStream(ruta);
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+        oos.writeObject(alPuntos);
+
+        oos.close();
+        fos.close();
     }
 }
