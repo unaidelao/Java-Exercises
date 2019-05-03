@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Scanner;
@@ -32,11 +33,34 @@ import java.util.Scanner;
  * del archivo especificado.
  * 
  * El método no capturará ninguna excepción.
+ * 
+ * === Ejercicio 7.43 ===
+ * Añada a la clase anterior un método main() para comprobar el funcionamiento de los métodos
+ * estáticos de los dos ejercicios anteriores.
+ * 
+ * Se crearán varios objetos Punto que se almacenarán en un array. A partir del array se obtendrá
+ * una colección para guardar sus elementos en un archivo.
+ * 
+ * Para finalizar, se obtendrá un objeto ArrayList<Punto> con los objetos Punto creados a partir
+ * de los datos almacenados en el archivo.
  */
 public class PruebaFlujos2 {
+    // Parte correspondiente al ejercicio 7.43.
+    public static void main(String[] args) {
+        Punto[] arrayPuntos = {new Punto(0,1,"Rojo"), new Punto(1,1,"Verde"), new Punto(1,0,"Azul")};
 
-    public PruebaFlujos2() {
+        String rutaFichero = "";
 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Escriba la ruta del fichero a crear: ");
+        rutaFichero = sc.nextLine();
+        sc.close();
+
+        try {
+            almacenarColPuntosEnArchivo((Arrays.asList(arrayPuntos)), rutaFichero);
+        } catch (IOException e) {
+            System.out.println("Capturada IOException: " + e.getMessage());
+        }
     }
 
     // Parte correspondiente al ejercicio 7.41.
