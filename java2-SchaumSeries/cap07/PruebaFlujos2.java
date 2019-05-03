@@ -68,6 +68,15 @@ import java.util.Scanner;
  * El método almacenará directamente el objeto ArrayList sobre el archivo recibido.
  * 
  * No se capturará ninguna excepción que pueda producirse.
+ * 
+ * === Ejercicio 7.47 ===
+ * Escriba un método, de  nombre leerArrayListDeArchivo, que reciba por parámetro el nombre de
+ * un archivo en el que se ha escrito previamente un objeto ArrayList que almacenaba objetos de
+ * la clase Punto.
+ * 
+ * El método leerá el objeto ArrayList del archivo y lo devolverá.
+ * 
+ * No se capturará ninguna excepción que pueda producirse.
  */
 public class PruebaFlujos2 {
     // Parte correspondiente al ejercicio 7.43.
@@ -161,5 +170,18 @@ public class PruebaFlujos2 {
 
         oos.close();
         fos.close();
+    }
+
+    // Parte correspondiente al ejercicio 7.47.
+    public static ArrayList<Punto> leerArrayListDeArchivo(String ruta) throws IOException, ClassNotFoundException {
+        FileInputStream fis = new FileInputStream(ruta);
+        ObjectInputStream ois = new ObjectInputStream(fis);
+
+        ArrayList<Punto> temp = (ArrayList<Punto>) (ois.readObject());
+
+        ois.close();
+        fis.close();
+
+        return temp;
     }
 }
