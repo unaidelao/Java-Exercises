@@ -1,8 +1,10 @@
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -43,6 +45,12 @@ import java.util.Scanner;
  * 
  * Para finalizar, se obtendrá un objeto ArrayList<Punto> con los objetos Punto creados a partir
  * de los datos almacenados en el archivo.
+ * 
+ * === Ejercicio 7.44 ===
+ * Escriba un método, de nombre almacenarColPuntosComoObjetos, que reciba por parámetro una
+ * colección de objetos Punto y el nombre del archivo donde se almacenarán.
+ * 
+ * El método escribirá directamente cada objeto Punto al archivo.
  */
 public class PruebaFlujos2 {
     // Parte correspondiente al ejercicio 7.43.
@@ -62,7 +70,7 @@ public class PruebaFlujos2 {
             System.out.println("Capturada IOException: " + e.getMessage());
         }
     }
-
+    /*
     // Parte correspondiente al ejercicio 7.41.
     public static void almacenarColPuntosEnArchivo(Collection<Punto> puntos, String ruta) throws IOException {
         PrintWriter fichero = new PrintWriter(new BufferedWriter(new FileWriter(ruta)));
@@ -76,6 +84,21 @@ public class PruebaFlujos2 {
             fichero.println(temp.obtenerColor());
         }
         fichero.close();
+    } */
+
+    // Parte correspondiente al ejercicio 7.44.
+    public static void almacenarColPuntosEnArchivo(Collection<Punto> puntos, String ruta) throws IOException {
+        FileOutputStream fos = new FileOutputStream(ruta);
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+        Iterator<Punto> iterPuntos = puntos.iterator();
+
+        while (iterPuntos.hasNext()) {
+            Punto temp = iterPuntos.next();
+            oos.writeObject(temp);
+        }
+        oos.close();
+        fos.close();
     }
 
     // Parte correspondiente al ejercicio 7.42.
