@@ -1,9 +1,12 @@
+import java.io.Serializable;
+
 /**
  * Clase Punto.
  * 
  * Utilizada como apoyo para la realización de varios ejercicios.
  */
-public class Punto {
+public class Punto implements Serializable {
+    private static final long serialVersionUID = 1L;
     private int coordX;
     private int coordY;
     private double distOrigen;
